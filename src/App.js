@@ -19,7 +19,7 @@ const App = () => (
     <div className="container">
        <Header/>
        <Switch>
-          <Route path='/' component={Details}/>
+          <Route exact path='/' component={Details}/>
           <Route path='/Rsvp' component={Rsvp}/>
           <Route path='/List' component={List}/>
        </Switch>
