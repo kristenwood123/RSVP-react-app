@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const List = () => {
+const List = ({}) => {
   return (
     <section className ='List'>
       <h1>Who's Going</h1>
@@ -10,9 +10,9 @@ const List = () => {
       <article className='attending'>
         <ul>
           {/* {people.map((person) => {
-            const {firstName, lastName, number, plusOne, driver} = person;
+            const {firstName, lastName, number, plusOne, driver, id} = person;
             return (
-              <li>
+              <li key={id}>
                 <h4>{firstName}{lastName}</h4>
                 <p>{number}</p>
                 <p>{plusOne}</p>

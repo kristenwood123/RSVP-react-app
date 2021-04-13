@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import { Context } from './MyProvider';
-
 
 const Rsvp = () => {
   const [inputValues, setInputValues] = useState({
@@ -15,26 +13,33 @@ const Rsvp = () => {
     //  const target = e.target;
     //   const value = target.type === 'checkbox' ? target.checked : target.value;
     //   const name = target.name;
-    setInputValues((prevState) => ({
+    
+       setInputValues((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value
-    }));
+    }));  
   };
 
   const handleSubmit = e => {
      e.preventDefault();
-    const {firstName, lastName, number, plusOne, driver} = inputValues
-    if(firstName && lastName && number){
-      const person = {firstName, lastName, number, plusOne, driver}
+    const {firstName, lastName, number, plusOne, driver} = inputValues;
+
+    if(firstName && lastName && number) {
+      const person = {id: new Date().getTime().toString(), firstName, lastName, number, plusOne, driver}
       setPeople((prevState) => {
         return [...prevState, person]
+      })
+      setInputValues({
+        firstName: '',
+        lastName: '',
+        number: ''
       })
     } 
   }
 
   return (
     <section className='Rsvp'>
-      <Context.Consumer>
+      
       <legend><h1>Please RSVP</h1></legend>
       
       <form onSubmit={handleSubmit}>
@@ -90,8 +95,6 @@ const Rsvp = () => {
           <button type='submit' className='btn'>Let's Party!</button>         
       </fieldset>
       </form>
-   
-      </Context.Consumer>
     </section>
   )
 }
