@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { Context } from './MyProvider';
+
 
 const Rsvp = () => {
   const [inputValues, setInputValues] = useState({
@@ -20,13 +22,21 @@ const Rsvp = () => {
   };
 
   const handleSubmit = e => {
-    e.preventDefault();
-    console.log(inputValues);
+     e.preventDefault();
+    const {firstName, lastName, number, plusOne, driver} = inputValues
+    if(firstName && lastName && number){
+      const person = {firstName, lastName, number, plusOne, driver}
+      setPeople((prevState) => {
+        return [...prevState, person]
+      })
+    } 
   }
 
   return (
     <section className='Rsvp'>
+      <Context.Consumer>
       <legend><h1>Please RSVP</h1></legend>
+      
       <form onSubmit={handleSubmit}>
         <fieldset>
         <div>
@@ -80,6 +90,8 @@ const Rsvp = () => {
           <button type='submit' className='btn'>Let's Party!</button>         
       </fieldset>
       </form>
+   
+      </Context.Consumer>
     </section>
   )
 }
