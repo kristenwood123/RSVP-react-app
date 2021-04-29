@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Modal from './Modal'
 
 const Rsvp = () => {
   const [inputValues, setInputValues] = useState({
@@ -8,6 +9,7 @@ const Rsvp = () => {
   });
 
   const [people, setPeople] = useState([])
+  const [showModal, setShowModal] = useState(false)
 
   const handleOnChange = e => {
     //  const target = e.target;
@@ -38,10 +40,10 @@ const Rsvp = () => {
   }
 
   return (
+    <>
+    {showModal && <Modal />}
     <section className='Rsvp'>
-      
-      <legend><h1>Please RSVP</h1></legend>
-      
+      <legend><h1>Please RSVP</h1></legend>     
       <form onSubmit={handleSubmit}>
         <fieldset>
         <div>
@@ -80,7 +82,7 @@ const Rsvp = () => {
         </div>
       </fieldset>
 
-      <fieldset>
+      {/* <fieldset>
         <div className="rsvp-additions">
             <div>
               <input type="checkbox" id='plusOne' name='plusOne' checked={inputValues.plusOne} onChange={handleOnChange}/>
@@ -91,11 +93,23 @@ const Rsvp = () => {
               <input type="checkbox" id='driver' name='driver' checked={inputValues.driver} onChange={handleOnChange}/>
               <label htmlFor="driver">I'll be sober driver</label>
             </div> 
-          </div>
+          </div> */}
           <button type='submit' className='btn'>Let's Party!</button>         
-      </fieldset>
+      {/* </fieldset> */}
       </form>
+      {people.map((person) => {
+            const {firstName, lastName, number, plusOne, driver, id} = person;
+            return (
+              <li key={id}>
+                <h4>{firstName}{lastName}</h4>
+                <p>{number}</p>
+                <p>{plusOne}</p>
+                <p>{driver}</p>
+              </li>
+            )
+          })} 
     </section>
+  </>
   )
 }
 

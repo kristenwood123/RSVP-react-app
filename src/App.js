@@ -13,8 +13,10 @@ import Rsvp from './components/Rsvp'
 import Details from './components/Details'
 import Footer from './components/Footer'
 
-const App = () => (
-  <BrowserRouter>
+
+const App = () => {
+  return (
+    <BrowserRouter>
     <div className="container">
        <Header/>
        <Switch>
@@ -25,7 +27,8 @@ const App = () => (
     </div>
      <Footer/>
     </BrowserRouter>
-)
+  )
+}
 
 
 export default App;
