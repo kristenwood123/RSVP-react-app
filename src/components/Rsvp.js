@@ -1,47 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Modal from './Modal'
+import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
-  const [inputValues, setInputValues] = useState({
-    firstName: '',
-    lastName: '',
-    number: ''
-  });
-
-  const [people, setPeople] = useState([])
-  const [showModal, setShowModal] = useState(false)
-
-  const handleOnChange = e => {
-    //  const target = e.target;
-    //   const value = target.type === 'checkbox' ? target.checked : target.value;
-    //   const name = target.name;
-    
-       setInputValues((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value
-    }));  
-  };
-
-  const handleSubmit = e => {
-     e.preventDefault();
-    const {firstName, lastName, number, plusOne, driver} = inputValues;
-
-    if(firstName && lastName && number) {
-      const person = {id: new Date().getTime().toString(), firstName, lastName, number, plusOne, driver}
-      setPeople((prevState) => {
-        return [...prevState, person]
-      })
-      setInputValues({
-        firstName: '',
-        lastName: '',
-        number: ''
-      })
-    } 
-  }
+ const {people, inputValues, handleOnChange, handleSubmit} = useGlobalContext()
 
   return (
     <>
-    {showModal && <Modal />}
+    {/* {showModal && <Modal />} */}
     <section className='Rsvp'>
       <legend><h1>Please RSVP</h1></legend>     
       <form onSubmit={handleSubmit}>
@@ -97,7 +63,7 @@ const Rsvp = () => {
           <button type='submit' className='btn'>Let's Party!</button>         
       {/* </fieldset> */}
       </form>
-      {people.map((person) => {
+      {/* {people.map((person) => {
             const {firstName, lastName, number, plusOne, driver, id} = person;
             return (
               <li key={id}>
@@ -107,7 +73,7 @@ const Rsvp = () => {
                 <p>{driver}</p>
               </li>
             )
-          })} 
+          })}  */}
     </section>
   </>
   )
