@@ -1,15 +1,17 @@
 import React from 'react'
-// import Modal from './Modal'
+import { RiSurgicalMaskLine } from 'react-icons/ri';
+import { GiHealthCapsule } from 'react-icons/gi';
+import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
- const { inputValues, handleOnChange, handleSubmit } = useGlobalContext()
+ const { inputValues, handleOnChange, handleSubmit, showModal } = useGlobalContext()
 
   return (
     <>
-    {/* {showModal && <Modal />} */}
     <section className='Rsvp'> 
-      <legend><h1>Please RSVP</h1></legend>    
+      <legend><h1>Please RSVP</h1></legend>  
+       <p>{showModal && <Modal />}</p>  
       <form onSubmit={handleSubmit}>
         <fieldset>
         <div className='rsvp-section'>
@@ -51,16 +53,16 @@ const Rsvp = () => {
         <div className="rsvp-additions">
             <div>
               <input type="checkbox" id='vacc' name='vacc' checked={inputValues.vacc} onChange={handleOnChange}/>
-              <label htmlFor="vacc">I'm vaccinated!</label>
+              <label htmlFor="vacc"> I'm vaccinated! <GiHealthCapsule/></label>
             </div>
 
             <div>
               <input type="checkbox" id='mask' name='mask' checked={inputValues.mask} onChange={handleOnChange}/>
-              <label htmlFor="mask">I will wear a mask!</label>
+              <label htmlFor="mask"> I will wear a mask! <RiSurgicalMaskLine/></label>
             </div> 
-          </div>      
+          </div>   
+           <button type='submit' className='btn'>Let's Party!</button>    
       </fieldset>
-      <button type='submit' className='btn'>Let's Party!</button> 
       </form>
     </section>
   </>

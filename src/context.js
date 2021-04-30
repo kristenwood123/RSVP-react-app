@@ -13,16 +13,8 @@ const AppProvider = ({ children }) => {
   });
 
   const [people, setPeople] = useState([])
-  // const [showModal, setShowModal] = useState(false)
-  // const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showModal, setShowModal] = useState(false)
 
-  // const openModal = () => {
-  //   setShowModal(true)
-  // }
-
-  //   const closeModal = () => {
-  //   setShowModal(false)
-  // }
 
 const handleOnChange = e => {
   const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -43,6 +35,9 @@ setInputValues((prevState) => ({
       setPeople((prevState) => {
         return [...prevState, person]
       })
+
+      setShowModal(true)
+
       setInputValues({
         firstName: '',
         lastName: '',
@@ -53,7 +48,7 @@ setInputValues((prevState) => ({
     } 
   }
 
-  return <AppContext.Provider value={{ people, inputValues, handleSubmit, handleOnChange}}>
+  return <AppContext.Provider value={{ people, inputValues, handleSubmit, handleOnChange, showModal}}>
     {children}
   </AppContext.Provider>
 } 

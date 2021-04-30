@@ -1,10 +1,11 @@
 import React from 'react'
-// import { AppContext } from '../context'
+import { GiPartyPopper } from 'react-icons/gi'
 
 const Modal = () => {
+
   return (
     <div>
-      
+      <p style={{paddingTop: '10px'}}>You've been added! <GiPartyPopper /></p>
     </div>
   )
 }
