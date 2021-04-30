@@ -4,6 +4,7 @@ import React, { useState, useContext } from 'react'
 const AppContext = React.createContext()
 
 const AppProvider = ({ children }) => {
+  // State -------------------------------------------->
   const [inputValues, setInputValues] = useState({
     firstName: '',
     lastName: '',
@@ -14,6 +15,10 @@ const AppProvider = ({ children }) => {
 
   const [people, setPeople] = useState([])
   const [showModal, setShowModal] = useState(false)
+  const [count, setCount] = useState(2)
+
+
+// Functions ----------------------------------------------->
 
 
 const handleOnChange = e => {
@@ -28,6 +33,8 @@ setInputValues((prevState) => ({
 
   const handleSubmit = e => {
      e.preventDefault();
+    setCount(count + 1)
+
     const {firstName, lastName, number, vacc, mask} = inputValues;
 
     if(firstName && lastName && number) {
@@ -48,7 +55,13 @@ setInputValues((prevState) => ({
     } 
   }
 
-  return <AppContext.Provider value={{ people, inputValues, handleSubmit, handleOnChange, showModal}}>
+  return <AppContext.Provider value={{ 
+    people, 
+    inputValues, 
+    handleSubmit, 
+    handleOnChange, 
+    showModal, 
+    count}}>
     {children}
   </AppContext.Provider>
 } 

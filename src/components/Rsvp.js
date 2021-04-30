@@ -1,11 +1,11 @@
 import React from 'react'
 import { RiSurgicalMaskLine } from 'react-icons/ri';
-import { GiHealthCapsule } from 'react-icons/gi';
+import { GiHealthCapsule, GiSatelliteCommunication } from 'react-icons/gi';
 import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
- const { inputValues, handleOnChange, handleSubmit, showModal } = useGlobalContext()
+ const { inputValues, handleOnChange, handleSubmit, showModal, handleCount} = useGlobalContext()
 
   return (
     <>
