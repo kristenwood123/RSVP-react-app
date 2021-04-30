@@ -3,10 +3,10 @@ import { useGlobalContext } from '../context'
 
 
 const List = () => {
-  const {people, inputValues, handleOnChange, handleSubmit} = useGlobalContext()
+  const { people } = useGlobalContext()
 
   return (
-    <section className ='List'>
+    <section className ='list'>
       <h1>Who's Going</h1>
       <p>There people are coming, are you?</p>
       <p>+1 means they're bringing someone. A steering wheel indicates a sober driver.</p>

@@ -3,7 +3,7 @@ import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
- const {people, inputValues, handleOnChange, handleSubmit} = useGlobalContext()
+ const { inputValues, handleOnChange, handleSubmit } = useGlobalContext()
 
   return (
     <>
@@ -63,17 +63,6 @@ const Rsvp = () => {
           <button type='submit' className='btn'>Let's Party!</button>         
       {/* </fieldset> */}
       </form>
-      {/* {people.map((person) => {
-            const {firstName, lastName, number, plusOne, driver, id} = person;
-            return (
-              <li key={id}>
-                <h4>{firstName}{lastName}</h4>
-                <p>{number}</p>
-                <p>{plusOne}</p>
-                <p>{driver}</p>
-              </li>
-            )
-          })}  */}
     </section>
   </>
   )
