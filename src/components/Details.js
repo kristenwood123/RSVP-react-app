@@ -4,31 +4,19 @@ const Details = () => {
   return (
     <section className='details'>
       <h1>Details</h1>
-      
-What:
-Hey, Soooo I'm turning 21! Damn... where does the time go ? So I hope ya'll can come and celebrate with me and catch up with each other. We are gonna have finger food and of course there will be multiple kegs of bud, however you should also bring your own ;)
+        <div className="text-container">
+          <h2>What:</h2>
+          <p>Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend theday with my favorite people :)</p> 
+          <br></br>
+          <p style={{marginBottom: '20px'}}><b>Note: </b>Please check if you've been vaccinated! If not, please wear a mask!</p>
+          <hr className='hr'/>
+          <h2 className='details__header'>Where:</h2>
+          <p style={{marginBottom: '20px'}}>120 Madonna Rd, <br></br>San luis Obispo<br></br>CA, 92380</p>
+          <hr className='hr'/>
+          <h2 className='details__header'>When:</h2>
+          <p>12:00-5:00pm<br></br>Saturday July 1st, 2021</p>
+</div>
 
-Note:
-Formal attire.
-
-Respect the property.
-
-Respect the people.
-My extended family will be in attendance, including my grandparents.
-
-There will be security.
-
-Where:
-My House
-88 Woodensdale Ave
-Normsford
-Alender City
-
-When:
-7:30pm
-Saturday 20th
-November
-2019
     </section>
   )
 }

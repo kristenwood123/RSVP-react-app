@@ -1,12 +1,14 @@
 :root {
   --color-win: #78cf82;
-  --font-family-main: "Lato", sans-serif;
+  --font-family-lato: "Lato", sans-serif;
+  --font-family-montserrat: "Montserrat", sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: var(--font-family-montserrat);
 }
 
 header {
@@ -30,24 +32,44 @@ ul {
 
 .navigation a {
   list-style-type: none;
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
-  background-color: white;
+}
+
+.navigation a:hover,
+.navigation .active {
+  text-decoration: underline;
 }
 
 .link-wrapper {
   display: flex;
   width: 100%;
-  background-color: white;
+  background-color: black;
   justify-content: space-around;
+  height: 2rem;
+  align-items: center;
 }
 
 /* Details---------------------------------------------------- */
 .details {
   padding-top: 6rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
+.hr {
+  border: 1px solid rgb(236, 234, 234);
+  width: 80%;
+  margin: auto;
+}
+
+.details__header {
+  margin-top: 2rem;
+}
+.text-container {
+  margin: 2rem;
+}
 /* RSVP---------------------------------------------------- */
 .Rsvp {
   padding-top: 6rem;
