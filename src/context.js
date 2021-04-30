@@ -8,8 +8,8 @@ const AppProvider = ({ children }) => {
     firstName: '',
     lastName: '',
     number: '', 
-    mask: true,
-    vacc: true
+    mask: '',
+    vacc: ''
   });
 
   const [people, setPeople] = useState([])
@@ -47,8 +47,8 @@ setInputValues((prevState) => ({
         firstName: '',
         lastName: '',
         number: '',
-        vacc: false,
-        mask: false
+        vacc: '',
+        mask: ''
       })
     } 
   }

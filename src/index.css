@@ -15,6 +15,16 @@ header {
   height: 10rem;
   margin: 0 auto;
   background-size: 400px;
+  position: relative;
+}
+
+.header__heading {
+  position: absolute;
+  top: 50%;
+  color: black;
+  font-size: 50px;
+
+  background-color: rgb(250, 246, 241, 0.5);
 }
 
 .navigation {
