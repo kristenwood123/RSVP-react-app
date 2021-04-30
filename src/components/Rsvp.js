@@ -45,24 +45,22 @@ const Rsvp = () => {
             value={inputValues.number}
             onChange={handleOnChange}
             required />
-        </div>
-        <button type='submit' className='btn'>Let's Party!</button> 
+        </div>       
       </fieldset>
-
-      {/* <fieldset>
+      <fieldset>
         <div className="rsvp-additions">
             <div>
-              <input type="checkbox" id='plusOne' name='plusOne' checked={inputValues.plusOne} onChange={handleOnChange}/>
-              <label htmlFor="plusOne" className='plusOne'>I want to bring a friend!</label>
+              <input type="checkbox" id='vacc' name='vacc' checked={inputValues.vacc} onChange={handleOnChange}/>
+              <label htmlFor="vacc">I'm vaccinated!</label>
             </div>
 
             <div>
-              <input type="checkbox" id='driver' name='driver' checked={inputValues.driver} onChange={handleOnChange}/>
-              <label htmlFor="driver">I'll be sober driver</label>
+              <input type="checkbox" id='mask' name='mask' checked={inputValues.mask} onChange={handleOnChange}/>
+              <label htmlFor="mask">I will wear a mask!</label>
             </div> 
-          </div> */}
-                  
-      {/* </fieldset> */}
+          </div>      
+      </fieldset>
+      <button type='submit' className='btn'>Let's Party!</button> 
       </form>
     </section>
   </>

@@ -72,6 +72,10 @@ ul {
   margin: 2rem;
 }
 
+h2 {
+  font-size: 21px;
+}
+
 /* RSVP---------------------------------------------------- */
 .Rsvp {
   padding-top: 6rem;
@@ -130,9 +134,39 @@ fieldset {
   font-weight: 500;
 }
 
-/* List ---------------------------------------------------- */
+/* List/Who's Going ---------------------------------------------------- */
 .list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   padding-top: 6rem;
+  width: 100%;
+}
+
+.list__header {
+  margin-bottom: 20px;
+}
+
+.list__ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(80px, auto);
+  grid-gap: 10px;
+}
+
+.attending {
+  margin-top: 2rem;
+  width: 50%;
+}
+
+.person {
+  color: rgb(235, 125, 92);
+  border: 1px solid rgb(236, 234, 234);
+  border-radius: 6px;
+}
+
+.person__text {
+  margin: 1rem;
 }
 
 /* Footer ---------------------------------------------------- */
