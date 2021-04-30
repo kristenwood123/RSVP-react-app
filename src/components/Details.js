@@ -14,9 +14,8 @@ const Details = () => {
           <p style={{marginBottom: '20px'}}>120 Madonna Rd, <br></br>San luis Obispo<br></br>CA, 92380</p>
           <hr className='hr'/>
           <h2 className='details__header'>When:</h2>
-          <p>12:00-5:00pm<br></br>Saturday July 1st, 2021</p>
+          <p>12:00-5:00pm<br></br>Saturday October 1st, 2021</p>
 </div>
-
     </section>
   )
 }

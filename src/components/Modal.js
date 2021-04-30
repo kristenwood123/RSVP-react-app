@@ -1,12 +1,12 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../context'
+// import React, { useContext } from 'react'
+// import { AppContext } from '../context'
 
-const Modal = () => {
-  return (
-    <div>
+// const Modal = () => {
+//   return (
+//     <div>
       
-    </div>
-  )
-}
+//     </div>
+//   )
+// }
 
-export default Modal
+// export default Modal

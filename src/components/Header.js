@@ -1,9 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-
 import '../index.css'
 
-import Rsvp from './Rsvp'
+
 
 const Header = () => {
   return (

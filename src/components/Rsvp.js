@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-import Modal from './Modal'
+import React from 'react'
+// import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
@@ -8,11 +8,11 @@ const Rsvp = () => {
   return (
     <>
     {/* {showModal && <Modal />} */}
-    <section className='Rsvp'>
-      <legend><h1>Please RSVP</h1></legend>     
+    <section className='Rsvp'> 
+      <legend><h1>Please RSVP</h1></legend>    
       <form onSubmit={handleSubmit}>
         <fieldset>
-        <div>
+        <div className='rsvp-section'>
           <label htmlFor="firstName">First Name: </label>
           <input type="text"
             placeholder='Required'
@@ -23,7 +23,7 @@ const Rsvp = () => {
             required />
         </div>
 
-        <div>
+        <div className='rsvp-section'>
           <label htmlFor="lastName">Last Name: </label>
           <input 
             type="text"
@@ -35,8 +35,8 @@ const Rsvp = () => {
             required />
         </div>
 
-        <div>
-          <label htmlFor="number">Phone Number</label>
+        <div className='rsvp-section'>
+          <label htmlFor="number">Phone Number: </label>
           <input 
             type="tel" 
             id='number' 
@@ -46,6 +46,7 @@ const Rsvp = () => {
             onChange={handleOnChange}
             required />
         </div>
+        <button type='submit' className='btn'>Let's Party!</button> 
       </fieldset>
 
       {/* <fieldset>
@@ -60,7 +61,7 @@ const Rsvp = () => {
               <label htmlFor="driver">I'll be sober driver</label>
             </div> 
           </div> */}
-          <button type='submit' className='btn'>Let's Party!</button>         
+                  
       {/* </fieldset> */}
       </form>
     </section>
