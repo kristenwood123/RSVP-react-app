@@ -5,7 +5,6 @@ const Footer = () => {
     <section className='footer'>
       <div className="footer-container">
         <p>RSVP</p>
-        <p className='to-top'>Back To Top</p>
       </div>
     </section>
   )
