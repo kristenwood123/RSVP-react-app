@@ -2,14 +2,13 @@ import React, { useState, useContext, useReducer } from 'react'
 const AppContext = React.createContext()
 
 
-
 // Reducer, where we deal with state of modal
 const reducer = (state, action) => {
   if (action.type === 'ADD_PERSON') {
     return {
       ...state,
       isModalOpen: true,
-      modalContent: "You\'ve been added!"
+      modalContent: "You've been added!"
     }
   } if (action.type === 'CLOSE_MODAL') {
     return {...state, 

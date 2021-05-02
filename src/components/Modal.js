@@ -11,9 +11,9 @@ const Modal = () => {
   })
 
   return (
-    <div>
+    <>
       <p style={{paddingTop: '10px'}}>{state.modalContent}</p>
-    </div>
+    </>
   )
 }
 

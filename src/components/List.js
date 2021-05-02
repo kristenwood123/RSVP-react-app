@@ -42,7 +42,7 @@ const List = () => {
               </li>
                <li className='person'>
                 <div className='person__text'>
-                <h4>Frank Q*bert</h4>
+                <h4>Frank Willis</h4>
                 <p>Phone: 555-123-1295</p>
                 <div className="icon" style={{display:'flex'}}>
                   <p><GiHealthCapsule /></p>
