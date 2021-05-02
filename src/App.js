@@ -14,6 +14,7 @@ import Details from './components/Details'
 import Footer from './components/Footer'
 
 
+
 const App = () => {
   return (
     <BrowserRouter>
