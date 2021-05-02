@@ -7,7 +7,7 @@ const Details = () => {
         <div className="text-container">
           <h2>What:</h2>
           <p style={{width: '75%', margin: '0 auto'}}>
-            Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend theday with my favorite people :)</p> 
+            Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend the day with my favorite people :)</p> 
           <br></br><br></br>
           <p style={{marginBottom: '20px'}}>
             <b>Note: </b>Please check if you've been vaccinated! If not, please wear a mask!</p>
