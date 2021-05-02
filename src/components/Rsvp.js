@@ -1,17 +1,18 @@
 import React from 'react'
 import { RiSurgicalMaskLine } from 'react-icons/ri';
-import { GiHealthCapsule, GiSatelliteCommunication } from 'react-icons/gi';
+import { GiHealthCapsule } from 'react-icons/gi';
+
 import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
 const Rsvp = () => {
- const { inputValues, handleOnChange, handleSubmit, showModal, handleCount} = useGlobalContext()
+const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
 
   return (
     <>
     <section className='Rsvp'> 
       <legend><h1>Please RSVP</h1></legend>  
-       <p>{showModal && <Modal />}</p>  
+       <p>{state.isModalOpen && <Modal />}</p>  
       <form onSubmit={handleSubmit}>
         <fieldset>
         <div className='rsvp-section'>

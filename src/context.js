@@ -1,10 +1,31 @@
-import React, { useState, useContext } from 'react'
-
-
+import React, { useState, useContext, useReducer } from 'react'
 const AppContext = React.createContext()
 
+
+
+// Reducer, where we deal with state of modal
+const reducer = (state, action) => {
+  if (action.type === 'ADD_PERSON') {
+    return {
+      ...state,
+      isModalOpen: true,
+      modalContent: "You\'ve been added!"
+    }
+  } if (action.type === 'CLOSE_MODAL') {
+    return {...state, 
+      isModalOpen: false
+    }
+  }
+  throw new Error('no matching action type')
+}
+
+const defaultModalState = {
+  isModalOpen: true, 
+  modalContent: ''
+}
+
 const AppProvider = ({ children }) => {
-  // State -------------------------------------------->
+// State -------------------------------------------->
   const [inputValues, setInputValues] = useState({
     firstName: '',
     lastName: '',
@@ -16,11 +37,11 @@ const AppProvider = ({ children }) => {
   const [people, setPeople] = useState([])
   const [showModal, setShowModal] = useState(false)
   const [count, setCount] = useState(2)
+  const [state, dispatch] = useReducer(reducer, defaultModalState)
+
 
 
 // Functions ----------------------------------------------->
-
-
 const handleOnChange = e => {
   const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
   const name = e.target.name;
@@ -29,14 +50,13 @@ setInputValues((prevState) => ({
       ...prevState,
       [name]: value
     }));  
-  };
+};
 
-  const handleSubmit = e => {
+
+const handleSubmit = e => {
      e.preventDefault();
     setCount(count + 1)
-
     const {firstName, lastName, number, vacc, mask} = inputValues;
-
     if(firstName && lastName && number) {
       const person = {id: new Date().getTime().toString(), firstName, lastName, number, vacc, mask}
       setPeople((prevState) => {
@@ -52,16 +72,25 @@ setInputValues((prevState) => ({
         vacc: '',
         mask: ''
       })
+
+      dispatch({type: 'ADD_PERSON'})
     } 
   }
 
+const closeModal = () => {
+  dispatch({type: 'CLOSE_MODAL'})
+}
+
   return <AppContext.Provider value={{ 
-    people, 
-    inputValues, 
+   people,
+   state,
+   showModal, 
+   count,
+   inputValues,
     handleSubmit, 
     handleOnChange, 
-    showModal, 
-    count}}>
+    closeModal
+   }}>
     {children}
   </AppContext.Provider>
 } 
