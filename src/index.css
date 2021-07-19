@@ -20,7 +20,8 @@ header {
 
 .header__heading {
   color: black;
-  font-size: 50px;
+  font-size: 30px;
+  margin-bottom: 1rem;
 }
 
 .count {
@@ -81,17 +82,22 @@ ul {
   border-radius: 8px;
   position: relative;
   bottom: 100px;
+  padding-bottom: 2rem;
+}
+
+.details-what p {
+  color: #535455;
 }
 
 .beer-icon {
-  font-size: 50px;
+  font-size: 80px;
   background: black;
   opacity: 0.8;
   color: white;
-  padding: 5px;
+  padding: 15px;
   border-radius: 50%;
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
 }
 
 .hr {
@@ -100,9 +106,6 @@ ul {
   margin: auto;
 }
 
-.details__header {
-  margin-top: 2rem;
-}
 .text-container {
   margin: 2rem;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
-import { BiBeer } from 'react-icons/bi'
+import { GiBeerStein } from 'react-icons/gi'
 
 
 const Details = () => {
@@ -9,9 +9,8 @@ const Details = () => {
     <section className='details'>
       <div className="text-container">
         <article className='details-what'>
-          <BiBeer className='beer-icon'/>
+          <GiBeerStein className='beer-icon'/>
             <h1 className='header__heading'>Beer Fest 2021</h1>
-            <h2>What:</h2>
             <p style={{width: '75%', margin: '0 auto'}}>
               Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend the day with my favorite people :)</p> 
         </article>
