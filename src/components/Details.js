@@ -1,9 +1,13 @@
 import React from 'react'
+import { useGlobalContext } from '../context'
+
 
 const Details = () => {
+   const { count } = useGlobalContext()
   return (
     <section className='details'>
-      <h1>Details</h1>
+      <h1 className='header__heading'>Beer Fest 2021</h1>
+        <p className='count'>Attending: {count}</p>
         <div className="text-container">
           <h2>What:</h2>
           <p style={{width: '75%', margin: '0 auto'}}>
