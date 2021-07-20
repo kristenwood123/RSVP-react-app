@@ -3,6 +3,7 @@
   --font-family-lato: "Lato", sans-serif;
   --font-family-montserrat: "Montserrat", sans-serif;
   --gray-text: gray;
+  --gray-border: #e9eaeb;
 }
 
 * {
@@ -85,7 +86,7 @@ ul {
 .details-card {
   background-color: white;
   border-radius: 8px;
-  border: 1px solid#e9eaeb;
+  border: 1px solid var(--gray-border);
   position: relative;
   bottom: 100px;
   padding-bottom: 2rem;
@@ -96,10 +97,13 @@ ul {
   color: var(--gray-text);
   font-weight: 500;
   line-height: 1.5rem;
+  margin-bottom: 5px;
 }
 
-.details-what p {
-  color: #535455;
+.details-hr {
+  border: 1px solid var(--gray-border);
+  width: 50px;
+  margin: 0 auto;
 }
 
 .rsvp-btn {

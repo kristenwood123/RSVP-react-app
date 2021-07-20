@@ -27,9 +27,11 @@ const Details = () => {
               <li className='details-nums'>{count}</li>
               <li>
                 <p>total attending</p>
+                <hr className='details-hr'/>
               </li>
               <li className='details-nums'>56</li>
-              <li>days left</li>
+              <p>days left</p>
+              <hr className='details-hr'/>
             </ul>
             <button className='rsvp-btn'>RSVP</button>
            </article>
