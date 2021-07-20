@@ -2,6 +2,7 @@
   --color-win: #78cf82;
   --font-family-lato: "Lato", sans-serif;
   --font-family-montserrat: "Montserrat", sans-serif;
+  --gray-text: gray;
 }
 
 * {
@@ -84,10 +85,17 @@ ul {
 .details-card {
   background-color: white;
   border-radius: 8px;
+  border: 1px solid#e9eaeb;
   position: relative;
   bottom: 100px;
   padding-bottom: 2rem;
   margin-bottom: 20px;
+}
+
+.details-card p {
+  color: var(--gray-text);
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 
 .details-what p {
@@ -96,13 +104,20 @@ ul {
 
 .rsvp-btn {
   padding: 10px;
+  margin-top: 1rem;
+  background-color: rgb(48, 182, 142);
+  color: white;
+  border: none;
+  width: 100px;
 }
-.stats li {
-  font-size: 20px;
+
+.details-nums {
+  font-size: 50px;
+  text-transform: bold;
 }
 
 .beer-icon {
-  font-size: 80px;
+  font-size: 60px;
   background: black;
   opacity: 0.8;
   color: white;

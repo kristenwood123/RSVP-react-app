@@ -24,11 +24,11 @@ const Details = () => {
          
            <article className='details-card stats'>
             <ul>
-              <li>{count}</li>
+              <li className='details-nums'>{count}</li>
               <li>
                 <p>total attending</p>
               </li>
-              <li>56</li>
+              <li className='details-nums'>56</li>
               <li>days left</li>
             </ul>
             <button className='rsvp-btn'>RSVP</button>
