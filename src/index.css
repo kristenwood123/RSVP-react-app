@@ -77,16 +77,28 @@ ul {
   background-color: #f4f5f7;
 }
 
-.details-what {
+.details__header {
+  margin-top: 1rem;
+}
+
+.details-card {
   background-color: white;
   border-radius: 8px;
   position: relative;
   bottom: 100px;
   padding-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .details-what p {
   color: #535455;
+}
+
+.rsvp-btn {
+  padding: 10px;
+}
+.stats li {
+  font-size: 20px;
 }
 
 .beer-icon {
@@ -108,6 +120,8 @@ ul {
 
 .text-container {
   margin: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
