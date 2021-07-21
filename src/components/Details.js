@@ -1,6 +1,8 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
 import { GiBeerStein } from 'react-icons/gi'
+import { ProgressBar } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const Details = () => {
@@ -36,7 +38,9 @@ const Details = () => {
               <li className='details-nums'>56</li>
               <p>days left</p>
               <hr className='details-hr'/>
-              
+              <div>
+                <ProgressBar now={60}/>
+              </div>
             </ul>
            </article>
         </div>

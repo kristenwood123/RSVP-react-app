@@ -4,6 +4,7 @@
   --font-family-montserrat: "Montserrat", sans-serif;
   --gray-text: gray;
   --gray-border: #e9eaeb;
+  --color-teal: rgb(48, 182, 142);
 }
 
 * {
@@ -116,7 +117,7 @@ ul {
 .list-btn {
   padding: 10px;
   margin-top: 1rem;
-  background-color: rgb(48, 182, 142);
+  background-color: var(--color-teal);
   color: white;
   border: none;
   width: 150px;
