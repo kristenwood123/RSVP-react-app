@@ -106,17 +106,29 @@ ul {
   margin: 0 auto;
 }
 
-.rsvp-btn {
+.btn-container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.rsvp-btn,
+.list-btn {
   padding: 10px;
   margin-top: 1rem;
   background-color: rgb(48, 182, 142);
   color: white;
   border: none;
   width: 150px;
-  font-size: 18px;
+  height: 50px;
+  font-size: 17px;
   font-weight: 600;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
+}
+
+.list-btn {
+  width: 200px;
 }
 
 .details-nums {
