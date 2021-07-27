@@ -21,6 +21,12 @@ header {
   position: relative;
 }
 
+.container {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .header__heading {
   color: black;
   font-size: 30px;

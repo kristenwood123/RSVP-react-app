@@ -39,7 +39,7 @@ const Details = () => {
               <p>days left</p>
               <hr className='details-hr'/>
               <div>
-                <ProgressBar now={60}/>
+                {/* <ProgressBar now={60}/> */}
               </div>
             </ul>
            </article>
