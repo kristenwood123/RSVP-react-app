@@ -83,7 +83,7 @@ header {
   padding-top: 6rem;
   margin: 0 auto;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 2rem;
   background-color: #f4f5f7;
 }
 
@@ -143,6 +143,9 @@ h2 {
   width: 200px;
 }
 
+.btn1.hover {
+  transform: scale(1.2);
+}
 .details-nums {
   font-size: 40px;
   font-weight: 600;
@@ -167,7 +170,7 @@ h2 {
 }
 
 .text-container {
-  margin: 2rem;
+  margin: 0 2rem 0 2rem;
   display: flex;
   flex-direction: column;
 }

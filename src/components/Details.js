@@ -16,8 +16,8 @@ const Details = () => {
             <p style={{width: '75%', margin: '0 auto'}}>
               Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend the day with my favorite people :)</p> 
               <div className="btn-container">
-                <button className='list-btn'>See whose going</button>
-                <button className='rsvp-btn'>RSVP</button>
+                <button className='list-btn btn1'>See whose going</button>
+                <button className='rsvp-btn btn1'>RSVP</button>
               </div>
         </article>
         <article className='details-card'>
