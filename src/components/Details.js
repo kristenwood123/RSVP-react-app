@@ -29,7 +29,7 @@ const Details = () => {
         </article>
          
            <article className='details-card stats'>
-            <ul>
+            <ul id='list-stats'>
               <li className='details-nums'>{count}</li>
               <li>
                 <p>total attending</p>
@@ -38,8 +38,8 @@ const Details = () => {
               <li className='details-nums'>56</li>
               <p>days left</p>
               <hr className='details-hr'/>
-              <div>
-                {/* <ProgressBar now={60}/> */}
+              <div id='progress-bar'>
+                <ProgressBar now={60} variant='info' />
               </div>
             </ul>
            </article>

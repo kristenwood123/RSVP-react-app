@@ -1,5 +1,4 @@
 :root {
-  --color-win: #78cf82;
   --font-family-lato: "Lato", sans-serif;
   --font-family-montserrat: "Montserrat", sans-serif;
   --gray-text: gray;
@@ -46,9 +45,11 @@ header {
   font-family: var(--font-family-main);
 }
 
-ul {
+#list-stats {
   list-style-type: none;
   background-color: white;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .navigation a {
@@ -84,6 +85,10 @@ ul {
   text-align: center;
   padding-bottom: 100px;
   background-color: #f4f5f7;
+}
+
+h2 {
+  font-size: 21px;
 }
 
 .details__header {
@@ -167,8 +172,12 @@ ul {
   flex-direction: column;
 }
 
-h2 {
-  font-size: 21px;
+.progress {
+  margin: 1.5rem;
+}
+
+.progress-custom {
+  background-color: black;
 }
 
 /* RSVP---------------------------------------------------- */
@@ -292,4 +301,12 @@ fieldset {
 
 .footer p {
   margin: 20px;
+}
+
+/* -------------------- Media Queries -------------------- */
+@media screen and (min-width: 375px) {
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
