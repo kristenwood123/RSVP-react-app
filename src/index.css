@@ -3,6 +3,7 @@
   --font-family-montserrat: "Montserrat", sans-serif;
   --gray-text: gray;
   --gray-border: #e9eaeb;
+  --light-gray-bg: #f4f5f7;
   --color-teal: rgb(48, 182, 142);
 }
 
@@ -18,12 +19,6 @@ header {
   margin: 0 auto;
   background-size: 400px;
   position: relative;
-}
-
-.container {
-  width: 100%;
-  padding-left: 0;
-  padding-right: 0;
 }
 
 .header__heading {
@@ -84,7 +79,8 @@ header {
   margin: 0 auto;
   text-align: center;
   padding-bottom: 2rem;
-  background-color: #f4f5f7;
+  background-color: var(--light-gray-bg);
+  width: 100%;
 }
 
 h2 {
@@ -173,6 +169,11 @@ h2 {
   margin: 0 2rem 0 2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.details-card {
+  width: 100%;
 }
 
 .progress {
@@ -317,5 +318,14 @@ fieldset {
     max-width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .text-container :nth-child(2) {
+    order: 1;
+  }
+  .details-card {
+    max-width: 800px;
   }
 }
