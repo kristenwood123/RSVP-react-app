@@ -118,6 +118,10 @@ h2 {
   padding-bottom: 15px;
 }
 
+.vl {
+  display: none;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
@@ -331,6 +335,15 @@ fieldset {
   }
   .details-card {
     max-width: 800px;
+  }
+  .details-hr {
+    display: none;
+  }
+
+  .vl {
+    border-left: 2px solid var(--gray-border);
+    height: 50px;
+    display: block;
   }
 
   #list-stats {
