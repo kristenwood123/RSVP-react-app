@@ -2,7 +2,7 @@
   --font-family-lato: "Lato", sans-serif;
   --font-family-montserrat: "Montserrat", sans-serif;
   --gray-text: gray;
-  --gray-border: #e9eaeb;
+  --gray-border: #d7d9db;
   --light-gray-bg: #f4f5f7;
   --color-teal: rgb(48, 182, 142);
 }
@@ -112,6 +112,10 @@ h2 {
   border: 1px solid var(--gray-border);
   width: 50px;
   margin: 0 auto;
+}
+
+.details-text {
+  padding-bottom: 15px;
 }
 
 .btn-container {
@@ -327,5 +331,11 @@ fieldset {
   }
   .details-card {
     max-width: 800px;
+  }
+
+  #list-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 }

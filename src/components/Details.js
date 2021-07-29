@@ -31,12 +31,12 @@ const Details = () => {
            <article className='details-card stats'>
             <ul id='list-stats'>
               <li className='details-nums'>{count}</li>
-              <li>
-                <p>total attending</p>
-                <hr className='details-hr'/>
-              </li>
+
+              <li className='details-text'>total attending</li>
+              <hr className='details-hr'/>
+
               <li className='details-nums'>56</li>
-              <p>days left</p>
+              <li className='details-text'>days left</li>
               <hr className='details-hr'/>
               <div id='progress-bar'>
                 <ProgressBar now={60} variant='info' />

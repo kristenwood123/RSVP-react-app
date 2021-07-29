@@ -50,7 +50,7 @@ const List = () => {
                 </div>
                 </div>
               </li>
-        </ul>
+          </ul>
       </article>
     </section>
   )
