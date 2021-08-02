@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom'
 
 //Components
-import Header from './components/Header'
 import List from './components/List'
 import Rsvp from './components/Rsvp'
 import Details from './components/Details'
@@ -20,8 +19,7 @@ const App = () => {
   return (
     <BrowserRouter>
     <div className="container">
-      <Navbar/>
-       <Header/>
+       <Navbar/>
        <Switch>
           <Route exact path='/' component={Details}/>
           <Route path='/Rsvp' component={Rsvp}/>
