@@ -4,7 +4,7 @@
   --gray-text: gray;
   --gray-border: #d7d9db;
   --light-gray-bg: #f4f5f7;
-  --color-teal: rgb(48, 182, 142);
+  --color-teal: #4eb6ab;
 }
 
 * {
@@ -184,14 +184,6 @@ h2 {
   width: 100%;
 }
 
-.progress {
-  margin: 1.5rem;
-}
-
-.progress-custom {
-  background-color: black;
-}
-
 /* RSVP---------------------------------------------------- */
 .Rsvp {
   padding-top: 6rem;
@@ -350,9 +342,5 @@ fieldset {
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
-
-  ul#list-stats:nth-child(2) {
-    order: 2;
   }
 }
