@@ -43,7 +43,7 @@ header {
 #list-stats {
   list-style-type: none;
   background-color: white;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
   padding-left: 0;
 }
 
