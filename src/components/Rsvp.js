@@ -1,7 +1,4 @@
 import React from 'react'
-import { RiSurgicalMaskLine } from 'react-icons/ri';
-import { GiHealthCapsule } from 'react-icons/gi';
-
 import Modal from './Modal'
 import { useGlobalContext } from '../context'
 
@@ -50,7 +47,7 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
             required />
         </div>       
            <button type='submit' className='btn'>Let's Party!</button>    
-      </fieldset>
+        </fieldset>
       </form>
     </section>
   </>

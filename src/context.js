@@ -29,13 +29,12 @@ const AppProvider = ({ children }) => {
     firstName: '',
     lastName: '',
     number: '', 
-    mask: '',
-    vacc: ''
   });
 
   const [people, setPeople] = useState([])
   const [showModal, setShowModal] = useState(false)
-  const [count, setCount] = useState(2)
+  const [count, setCount] = useState(8)
+  const [unsure, setUnsure] = useState(2)
   const [state, dispatch] = useReducer(reducer, defaultModalState)
 
 
@@ -55,9 +54,9 @@ setInputValues((prevState) => ({
 const handleSubmit = e => {
      e.preventDefault();
     setCount(count + 1)
-    const {firstName, lastName, number, vacc, mask} = inputValues;
+    const {firstName, lastName, number } = inputValues;
     if(firstName && lastName && number) {
-      const person = {id: new Date().getTime().toString(), firstName, lastName, number, vacc, mask}
+      const person = {id: new Date().getTime().toString(), firstName, lastName, number }
       setPeople((prevState) => {
         return [...prevState, person]
       })
@@ -68,8 +67,6 @@ const handleSubmit = e => {
         firstName: '',
         lastName: '',
         number: '',
-        vacc: '',
-        mask: ''
       })
 
       dispatch({type: 'ADD_PERSON'})
@@ -85,6 +82,7 @@ const closeModal = () => {
    state,
    showModal, 
    count,
+   unsure,
    inputValues,
     handleSubmit, 
     handleOnChange, 

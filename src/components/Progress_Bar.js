@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Progress_Bar = ({bgcolor, progress, height}) => {
+const Progress_Bar = ({bgcolor, height}) => {
    const Parentdiv = {
         height: height,
         width: '80%',
@@ -11,7 +11,7 @@ const Progress_Bar = ({bgcolor, progress, height}) => {
       
       const Childdiv = {
         height: '100%',
-        width: `${progress}%`,
+        width: '60%',
         backgroundColor: bgcolor,
         borderRadius: 40,
       }

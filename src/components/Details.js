@@ -5,7 +5,7 @@ import Progressbar from './Progress_Bar'
 
 
 const Details = () => {
-   const { count } = useGlobalContext()
+   const { count, unsure } = useGlobalContext()
   return (
     <section className='details'>
       <div className="text-container">
@@ -36,12 +36,24 @@ const Details = () => {
                 <hr className='details-hr'/>
                 <div className="vl"></div>
               <div>
+                <li className='details-nums'>4</li>
+                <li className='details-text'>not attending</li>
+              </div>
+                <hr className='details-hr'/>  
+                <div className="vl"></div>
+              <div>
+                <li className='details-nums'>{unsure}</li>
+                <li className='details-text'>unsure</li>
+              </div>
+                <hr className='details-hr'/>  
+                <div className="vl"></div>
+              <div>
                 <li className='details-nums'>56</li>
                 <li className='details-text'>days left</li>
               </div>
               <hr className='details-hr'/>  
             </ul>
-            <Progressbar bgcolor='#4eb6ab' height={15}/>
+            <Progressbar bgcolor='#4eb6ab' height={15} now={60} />
            </article>
         </div>
     </section>

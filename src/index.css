@@ -114,6 +114,10 @@ h2 {
 
 .details-text {
   padding-bottom: 15px;
+  color: var(--gray-text);
+  font-weight: 500;
+  max-width: 80px;
+  text-align: center;
 }
 
 .vl {
@@ -262,6 +266,7 @@ fieldset {
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 10px;
+  list-style-type: none;
 }
 
 .attending {
@@ -270,7 +275,7 @@ fieldset {
 }
 
 .person {
-  color: rgb(247, 114, 6);
+  color: var(--color-teal);
   border: 1px solid rgb(236, 234, 234);
   border-radius: 6px;
 }
@@ -326,7 +331,7 @@ fieldset {
 
   .vl {
     border-left: 2px solid var(--gray-border);
-    height: 50px;
+    height: 70px;
     display: block;
   }
 
