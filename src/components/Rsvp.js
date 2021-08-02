@@ -49,19 +49,6 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
             onChange={handleOnChange}
             required />
         </div>       
-      </fieldset>
-      <fieldset>
-        <div className="rsvp-additions">
-            <div>
-              <input type="checkbox" id='vacc' name='vacc' checked={inputValues.vacc} onChange={handleOnChange}/>
-              <label htmlFor="vacc"> I'm vaccinated! <GiHealthCapsule/></label>
-            </div>
-
-            <div>
-              <input type="checkbox" id='mask' name='mask' checked={inputValues.mask} onChange={handleOnChange}/>
-              <label htmlFor="mask"> I will wear a mask! <RiSurgicalMaskLine/></label>
-            </div> 
-          </div>   
            <button type='submit' className='btn'>Let's Party!</button>    
       </fieldset>
       </form>
