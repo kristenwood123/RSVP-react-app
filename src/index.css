@@ -351,4 +351,8 @@ fieldset {
     align-items: center;
     justify-content: space-around;
   }
+
+  ul#list-stats:nth-child(2) {
+    order: 2;
+  }
 }
