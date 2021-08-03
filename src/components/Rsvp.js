@@ -8,7 +8,7 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
   return (
     <>
     <section className='Rsvp'> 
-      <legend><h1>Please RSVP</h1></legend>  
+      <legend><h1>Login</h1></legend>  
        <p>{state.isModalOpen && <Modal />}</p>  
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -34,6 +34,18 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
             onChange={handleOnChange}
             required />
         </div>
+
+           <div className='rsvp-section'>
+          <label htmlFor="number">Email: </label>
+          <input 
+            type="email" 
+            id='email' 
+            name='email'
+            placeholder='123-456-7890' 
+            value={inputValues.email}
+            onChange={handleOnChange}
+            required />
+        </div> 
 
         <div className='rsvp-section'>
           <label htmlFor="number">Phone Number: </label>

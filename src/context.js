@@ -54,9 +54,9 @@ setInputValues((prevState) => ({
 const handleSubmit = e => {
      e.preventDefault();
     setCount(count + 1)
-    const {firstName, lastName, number } = inputValues;
+    const {firstName, lastName, number, email } = inputValues;
     if(firstName && lastName && number) {
-      const person = {id: new Date().getTime().toString(), firstName, lastName, number }
+      const person = {id: new Date().getTime().toString(), firstName, lastName, email, number }
       setPeople((prevState) => {
         return [...prevState, person]
       })
@@ -66,6 +66,7 @@ const handleSubmit = e => {
       setInputValues({
         firstName: '',
         lastName: '',
+        email: '',
         number: '',
       })
 

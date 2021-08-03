@@ -4,7 +4,7 @@ import { GiBeerStein } from 'react-icons/gi'
 import Progressbar from './Progress_Bar'
 
 
-const Details = () => {
+const Main = () => {
    const { count, unsure } = useGlobalContext()
   return (
     <section className='details'>
@@ -60,4 +60,4 @@ const Details = () => {
   )
 }
 
-export default Details
+export default Main

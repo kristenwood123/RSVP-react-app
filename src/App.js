@@ -9,11 +9,9 @@ import {
 //Components
 import List from './components/List'
 import Rsvp from './components/Rsvp'
-import Details from './components/Details'
+import Main from './components/Main'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-
-
 
 const App = () => {
   return (
@@ -21,7 +19,7 @@ const App = () => {
     <div className="container">
        <Navbar/>
        <Switch>
-          <Route exact path='/' component={Details}/>
+          <Route exact path='/' component={Main}/>
           <Route path='/Rsvp' component={Rsvp}/>
           <Route path='/List' component={List}/>
        </Switch>
@@ -30,6 +28,5 @@ const App = () => {
     </BrowserRouter>
   )
 }
-
 
 export default App;
