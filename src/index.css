@@ -198,6 +198,7 @@ h2 {
 
 .signUp h1 {
   text-align: center;
+  padding-top: 2rem;
 }
 
 .signup-section {
@@ -209,6 +210,10 @@ h2 {
 form {
   width: 90%;
   border: 1px solid var(--gray-border);
+  border-radius: 8px;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 500px;
 }
 
 label[for] {

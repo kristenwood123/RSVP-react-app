@@ -36,6 +36,7 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
            <button type='submit' className='btn'>Sign Up!</button>    
         </fieldset>
       </form>
+      <p>Already have an account? Log in</p>
     </section>
   </>
   )
