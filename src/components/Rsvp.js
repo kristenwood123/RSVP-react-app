@@ -1,6 +1,6 @@
 import React from 'react'
 import Modal from './Modal'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../contexts/context'
 
 const Rsvp = () => {
 const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()

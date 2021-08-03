@@ -1,5 +1,5 @@
 import React from 'react'
-import { useGlobalContext } from '../context'
+import { useGlobalContext } from '../contexts/context'
 import { GiBeerStein } from 'react-icons/gi'
 import Progressbar from './Progress_Bar'
 
