@@ -41,7 +41,7 @@ const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
             type="email" 
             id='email' 
             name='email'
-            placeholder='123-456-7890' 
+            placeholder='Required' 
             value={inputValues.email}
             onChange={handleOnChange}
             required />

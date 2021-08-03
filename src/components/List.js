@@ -12,12 +12,13 @@ const List = () => {
       <article className='attending'>
         <ul className='list__ul'>
           {people.map((person) => {
-            const {firstName, lastName, number, id} = person;
+            const {firstName, lastName, number, id, email} = person;
             return (
         
               <li key={id} className='person'>
                 <div className='person__text'>
                 <h4>{firstName} {lastName}</h4>
+                <p>{email}</p>
                 <p>Phone: {number}</p>
                 </div>
               </li>

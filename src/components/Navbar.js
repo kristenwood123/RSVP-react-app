@@ -14,7 +14,7 @@ const Navbar = () => {
           backgroundPosition: 'center', 
           backgroundSize: 'cover'}}>
         <li><NavLink exact to='/'>Details</NavLink></li>
-        <li><NavLink to='/Rsvp'>Rsvp</NavLink></li>
+        <li><NavLink to='/signup'>Rsvp</NavLink></li>
         <li><NavLink to='/List'>Who's Going</NavLink></li> 
       </div>
     </header>
