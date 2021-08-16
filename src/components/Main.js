@@ -2,10 +2,12 @@ import React from 'react'
 import { useGlobalContext } from '../contexts/context'
 import { GiBeerStein } from 'react-icons/gi'
 import Progressbar from './Progress_Bar'
+import { useHistory } from 'react-router-dom'
 
 
 const Main = () => {
    const { count, unsure } = useGlobalContext()
+   const history = useHistory()
   return (
     <section className='details'>
       <div className="text-container">
@@ -15,8 +17,12 @@ const Main = () => {
             <p style={{width: '75%', margin: '0 auto'}}>
               Hey! It's that time of year for Beer Fest and I want to go with all of my closest friends! Which is why you're receiving this invite. The details are all below and I can't wait to spend the day with my favorite people :)</p> 
               <div className="btn-container">
-                <button className='list-btn btn1'>See whose going</button>
-                <button className='rsvp-btn btn1'>RSVP</button>
+                <button 
+                  className='list-btn btn1'
+                  onClick={() => history.push('/signup')}>See whose going</button>
+                <button 
+                  className='rsvp-btn btn1'
+                  onClick={() => history.push('/signup')}>RSVP</button>
               </div>
         </article>
         <article className='details-card'>
