@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { auth } from '../firebase'
 
 const AuthContext = React.createContext()
 
-export function AuthProvider() {
+export function useAuthGlobal() {
+  return useContext(AuthContext)
+}
+export function AuthProvider({ children }) {
+  const [currentUser, setCurrentUser] = useState()
+
+  const value = {
+    currentUser
+  }
   return (
-    <AuthContext.Provider>
-      
+    <AuthContext.Provider value={value}>
+      {children}
     </AuthContext.Provider>
   )
 }
