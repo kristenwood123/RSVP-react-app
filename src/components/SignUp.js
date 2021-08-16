@@ -1,15 +1,21 @@
 import React from 'react'
 import Modal from './Modal'
 import { useGlobalContext } from '../contexts/context'
+// import { useAuthGlobal } from '../contexts/AuthContext'
 
 const SignUp = () => {
-const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
+const { inputValues, handleOnChange, state} = useGlobalContext()
+
+function handleSubmit(e) {
+  e.preventDefault()
+  console.log('helloo')
+}
 
   return (
     <>
     <section className='signUp'>  
        <p>{state.isModalOpen && <Modal />}</p>  
-      <form onSubmit={handleSubmit}>
+      <form onClick={handleSubmit}>
         <h1>Sign Up</h1> 
         <fieldset>
            <div className='signup-section'>
