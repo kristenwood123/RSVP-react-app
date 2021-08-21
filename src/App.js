@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
+import { AuthProvider } from './contexts/AuthContext'
 
 //Components
 import List from './components/List'
@@ -15,6 +16,7 @@ import SignUp from './components/SignUp'
 
 const App = () => {
   return (
+    // <AuthProvider>
     <BrowserRouter>
     <div className="container">
        <Navbar/>
@@ -26,6 +28,7 @@ const App = () => {
     </div>
      <Footer/>
     </BrowserRouter>
+    // </AuthProvider>
   )
 }
 

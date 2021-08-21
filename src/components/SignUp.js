@@ -1,10 +1,8 @@
 import React from 'react'
 import Modal from './Modal'
-import { useGlobalContext } from '../contexts/context'
 // import { useAuthGlobal } from '../contexts/AuthContext'
 
 const SignUp = () => {
-const { inputValues, handleOnChange, state} = useGlobalContext()
 
 function handleSubmit(e) {
   e.preventDefault()
@@ -14,18 +12,15 @@ function handleSubmit(e) {
   return (
     <>
     <section className='signUp'>  
-       <p>{state.isModalOpen && <Modal />}</p>  
-      <form onClick={handleSubmit}>
-        <h1>Sign Up</h1> 
+       {/* <p>{state.isModalOpen && <Modal />}</p>   */}
+      <form onSubmit={handleSubmit}>
         <fieldset>
+        <h1>Sign Up</h1> 
            <div className='signup-section'>
           <label htmlFor="number">Email: </label>
           <input 
             type="email" 
-            id='email' 
             name='email'
-            value={inputValues.email}
-            onChange={handleOnChange}
             required />
         </div> 
 
@@ -33,14 +28,11 @@ function handleSubmit(e) {
           <label htmlFor="number">Password: </label>
           <input 
             type="password" 
-            id='password' 
             name='password'
-            value={inputValues.password}
-            onChange={handleOnChange}
             required />
         </div>       
-           <button type='submit' className='btn'>Sign Up!</button>    
-        </fieldset>
+           <button type='submit' className='btn'>Sign Up!</button>  
+           </fieldset>  
       </form>
       <p>Already have an account? Log in</p>
     </section>
