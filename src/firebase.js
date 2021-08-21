@@ -2,15 +2,16 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 
   // Initialize Firebase
-//   const app = firebase.initializeApp({
-//     apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-//     authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-//     projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-//     storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-//     messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-//     appId: process.env.REACT_APP_FIREBASE_APP_ID,
-//     measurementId: process.env.REACT_APP_FIREBASE_APP_MEASUREMENT_ID
-//   });
+  const app = firebase.initializeApp({
+    apiKey: "AIzaSyBUueKqJJCaRuMYZjQV_JeEk_2Too7j89c",
+    authDomain: "rsvp-react-app.firebaseapp.com",
+    projectId: "rsvp-react-app",
+    storageBucket: "rsvp-react-app.appspot.com",
+    messagingSenderId: "643867441344",
+    appId: "1:643867441344:web:17eddfac99a506cfa45525",
+    measurementId: "G-C24CZT0KGS"
+  });
 
-// export const auth = app.auth()
-// export default app
+export const auth = app.auth()
+export default app
+

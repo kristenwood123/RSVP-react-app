@@ -1,18 +1,34 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+import { Alert } from 'react-bootstrap'
 import Modal from './Modal'
-// import { useAuthGlobal } from '../contexts/AuthContext'
+
+import { useAuthGlobal } from '../contexts/AuthContext'
 
 const SignUp = () => {
+const emailRef = useRef()
+const passwordRef = useRef()
+const { signupUser, currentUser } = useAuthGlobal()
+const [error, setError] = useState('')
+const [loading, setLoading] = useState(false)
 
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault()
-  console.log('helloo')
+  try {
+    setError('')
+    setLoading(true)
+    await signupUser(emailRef.current.value, passwordRef.current.value)
+  } catch {
+    setError('Failed to create an account')
+  } 
+  setLoading(false)
 }
 
-  return (
+return (
     <>
     <section className='signUp'>  
        {/* <p>{state.isModalOpen && <Modal />}</p>   */}
+       {currentUser && currentUser.email}
+       {error && <Alert variant='danger'>{error}</Alert>}
       <form onSubmit={handleSubmit}>
         <fieldset>
         <h1>Sign Up</h1> 
@@ -21,6 +37,7 @@ function handleSubmit(e) {
           <input 
             type="email" 
             name='email'
+            ref={emailRef}
             required />
         </div> 
 
@@ -29,9 +46,10 @@ function handleSubmit(e) {
           <input 
             type="password" 
             name='password'
+            ref={passwordRef}
             required />
         </div>       
-           <button type='submit' className='btn'>Sign Up!</button>  
+           <button type='submit' className='btn' disabled={loading}>Sign Up!</button>  
            </fieldset>  
       </form>
       <p>Already have an account? Log in</p>
