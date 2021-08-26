@@ -13,22 +13,24 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import SignUp from './components/SignUp'
+import Login from './components/login'
 
 const App = () => {
   return (
-    // <AuthProvider>
     <BrowserRouter>
     <div className="container">
-       <Navbar/>
+       <Navbar/>       
+      <AuthProvider>
        <Switch>
           <Route exact path='/' component={Main}/>
           <Route path='/signup' component={SignUp}/>
-          <Route path='/List' component={List}/>
+          <Route path='/list' component={List}/>
+          <Rote path='/login' component={Login}/>
        </Switch>
+    </AuthProvider>
     </div>
      <Footer/>
     </BrowserRouter>
-    // </AuthProvider>
   )
 }
 
