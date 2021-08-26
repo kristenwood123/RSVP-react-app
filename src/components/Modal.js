@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
-import { useGlobalContext } from '../contexts/context'
 
 const Modal = () => {
-  const { state, closeModal } = useGlobalContext()
 
   useEffect(() => {
     setTimeout(() => {
-      closeModal()
+      
     }, 3000)
   })
 
   return (
     <>
-      <p style={{paddingTop: '10px'}}>{state.modalContent}</p>
+      <p style={{paddingTop: '10px'}}></p>
     </>
   )
 }

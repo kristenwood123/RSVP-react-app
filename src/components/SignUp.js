@@ -17,6 +17,7 @@ async function handleSubmit(e) {
     setError('')
     setLoading(true)
     await signupUser(emailRef.current.value, passwordRef.current.value)
+    
   } catch {
     setError('Failed to create an account')
   } 
@@ -27,7 +28,7 @@ return (
     <>
     <section className='signUp'>  
        {/* <p>{state.isModalOpen && <Modal />}</p>   */}
-       {currentUser && currentUser.email}
+       {currentUser.email}
        {error && <Alert variant='danger'>{error}</Alert>}
       <form onSubmit={handleSubmit}>
         <fieldset>
