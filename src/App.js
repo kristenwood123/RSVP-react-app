@@ -13,7 +13,7 @@ import Main from './components/Main'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import SignUp from './components/SignUp'
-import Login from './components/login'
+import Login from './components/Login'
 
 const App = () => {
   return (
@@ -25,7 +25,7 @@ const App = () => {
           <Route exact path='/' component={Main}/>
           <Route path='/signup' component={SignUp}/>
           <Route path='/list' component={List}/>
-          <Rote path='/login' component={Login}/>
+          <Route path='/login' component={Login}/>
        </Switch>
     </AuthProvider>
     </div>

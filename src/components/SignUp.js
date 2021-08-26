@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { Alert } from 'react-bootstrap'
-import Modal from './Modal'
+import { Link } from 'react-router-dom'
 
 import { useAuthGlobal } from '../contexts/AuthContext'
 
@@ -27,8 +27,6 @@ async function handleSubmit(e) {
 return (
     <>
     <section className='signUp'>  
-       {/* <p>{state.isModalOpen && <Modal />}</p>   */}
-       {currentUser.email}
        {error && <Alert variant='danger'>{error}</Alert>}
       <form onSubmit={handleSubmit}>
         <fieldset>
@@ -53,7 +51,7 @@ return (
            <button type='submit' className='btn' disabled={loading}>Sign Up!</button>  
            </fieldset>  
       </form>
-      <p>Already have an account? Log in</p>
+      <p>Already have an account? <Link to='/login'>Log in</Link></p>
     </section>
   </>
   )
