@@ -7,25 +7,31 @@ const List = () => {
   return (
     <section className ='list'>
       <h1 className='list__header'>RSVP</h1>
-      <p>Can you make it?</p>
+      <p>These people are coming, are you?</p>
 
       <article className='attending'>
         <form>
         <fieldset>
            <div className='signup-section'>
-          <label htmlFor="number">Name</label>
+          <label htmlFor="number">First</label>
           <input 
             type="text" 
+            name='name'
             required />
-        </div> 
-
-        <div className='signup-section'>
-          <label htmlFor="number">Password: </label>
+        </div>  
+          <div className='signup-section'>
+          <label htmlFor="number">Last </label>
           <input 
-            type='checkbox'
+            type="text" 
+            name='name'
             required />
-        </div>       
-           <button type='submit' className='btn'>Sign Up!</button>  
+        </div>    
+          <h2>Can you attend?</h2>
+          {/* put in astericks */}
+          <label htmlFor="attending">Yes, I'll be there</label>
+           <input type="checkbox" name='attending'/>  
+          <label htmlFor="reject">No, I can't make it</label>
+           <input type="checkbox" name='reject'/>  
            </fieldset>  
       </form>
       </article>
