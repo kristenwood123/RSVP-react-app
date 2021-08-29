@@ -1,15 +1,16 @@
 import React, { useRef, useState } from 'react'
 import { Alert } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import { useAuthGlobal } from '../contexts/AuthContext'
 
 const SignUp = () => {
-const emailRef = useRef()
-const passwordRef = useRef()
-const { signupUser } = useAuthGlobal()
-const [error, setError] = useState('')
-const [loading, setLoading] = useState(false)
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  const { signupUser } = useAuthGlobal()
+  const [error, setError] = useState('')
+  const [loading, setLoading] = useState(false)
+  const history = useHistory()
 
 async function handleSubmit(e) {
   e.preventDefault()
@@ -17,7 +18,7 @@ async function handleSubmit(e) {
     setError('')
     setLoading(true)
     await signupUser(emailRef.current.value, passwordRef.current.value)
-    
+    history.push('/list')
   } catch {
     setError('Failed to create an account')
   } 

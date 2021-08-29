@@ -24,8 +24,8 @@ const App = () => {
        <Switch>
           <Route exact path='/' component={Main}/>
           <Route path='/signup' component={SignUp}/>
-          <Route path='/list' component={List}/>
           <Route path='/login' component={Login}/>
+          <Route path='/list' component={List}/>
        </Switch>
     </AuthProvider>
     </div>

@@ -6,37 +6,28 @@ const List = () => {
 
   return (
     <section className ='list'>
-      <h1 className='list__header'>Who's Going</h1>
-      <p>These people are coming, are you?</p>
+      <h1 className='list__header'>RSVP</h1>
+      <p>Can you make it?</p>
 
       <article className='attending'>
-        <ul className='list__ul'>
-          {people.map((person) => {
-            const {firstName, lastName, number, id, email} = person;
-            return (
-        
-              <li key={id} className='person'>
-                <div className='person__text'>
-                <h4>{firstName} {lastName}</h4>
-                <p>{email}</p>
-                <p>Phone: {number}</p>
-                </div>
-              </li>
-            )
-          })}
-            <li className='person'>
-                <div className='person__text'>
-                <h4>Annie Carlson</h4>
-                <p>Phone: 854-123-2432</p>
-                </div>
-              </li>
-               <li className='person'>
-                <div className='person__text'>
-                <h4>Frank Willis</h4>
-                <p>Phone: 555-123-1295</p>
-                </div>
-              </li>
-          </ul>
+        <form>
+        <fieldset>
+           <div className='signup-section'>
+          <label htmlFor="number">Name</label>
+          <input 
+            type="text" 
+            required />
+        </div> 
+
+        <div className='signup-section'>
+          <label htmlFor="number">Password: </label>
+          <input 
+            type='checkbox'
+            required />
+        </div>       
+           <button type='submit' className='btn'>Sign Up!</button>  
+           </fieldset>  
+      </form>
       </article>
     </section>
   )
