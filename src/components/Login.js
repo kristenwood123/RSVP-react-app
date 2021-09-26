@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Alert } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuthGlobal } from '../contexts/AuthContext'
+import { LoginForm } from '../styles/LoginStyles'
 
 const Login = () => {
 
@@ -29,11 +30,11 @@ return (
     <>
     <section className='signUp'>  
        {error && <Alert variant='danger'>{error}</Alert>}
-      <form onSubmit={handleSubmit}>
+      <LoginForm onSubmit={handleSubmit}>
         <fieldset>
         <h1>Login</h1> 
            <div className='signup-section'>
-          <label htmlFor="number">Email: </label>
+          <label htmlFor="email">Email: </label>
           <input 
             type="email" 
             name='email'
@@ -42,17 +43,17 @@ return (
         </div> 
 
         <div className='signup-section'>
-          <label htmlFor="number">Password: </label>
+          <label htmlFor="password">Password: </label>
           <input 
             type="password" 
             name='password'
             ref={passwordRef}
             required />
         </div>       
-           <button type='submit' className='btn' disabled={loading}>Login</button>  
+           <button type='submit' className='btn' disabled={loading}>Login!</button>  
            </fieldset>  
-      </form>
-      <p>Need an account? <Link to='/signup'>Sign up</Link></p>
+      </LoginForm>
+      <p style={{marginTop: '1rem'}}>Need to create an account? <Link to='/signup' style={{textDecoration:'none', color: '#000'}}>Sign Up</Link></p>
     </section>
   </>
   )
