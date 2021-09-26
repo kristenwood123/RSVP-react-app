@@ -2,6 +2,7 @@ import React from 'react'
 import Modal from './Modal'
 import { useGlobalContext } from '../contexts/context'
 import { collection } from 'firebase/firestore'
+import { RsvpForm } from '../styles/'
 
 const Rsvp = () => {
 const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()

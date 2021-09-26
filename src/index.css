@@ -215,15 +215,6 @@ h2 {
   flex-direction: column;
 }
 
-form {
-  width: 100%;
-  border: 1px solid var(--gray-border);
-  border-radius: 8px;
-  margin-top: 1rem;
-  padding-bottom: 2rem;
-  max-width: 500px;
-}
-
 label[for] {
   margin-bottom: 10px;
   padding-right: 10px;
