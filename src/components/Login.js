@@ -19,7 +19,7 @@ async function handleSubmit(e) {
     setError('')
     setLoading(true)
     await login(emailRef.current.value, passwordRef.current.value)
-    history.push('/list')
+    history.push('/')
   } catch {
     setError('Failed to sign in')
   } 
@@ -31,8 +31,8 @@ return (
     <section className='signUp'>  
        {error && <Alert variant='danger'>{error}</Alert>}
       <LoginForm onSubmit={handleSubmit}>
-        <fieldset>
-        <h1>Login</h1> 
+        <div className='login-wrapper'>
+        <h1 style={{marginBottom:'1rem'}}>Login</h1> 
            <div className='signup-section'>
           <label htmlFor="email">Email: </label>
           <input 
@@ -49,9 +49,9 @@ return (
             name='password'
             ref={passwordRef}
             required />
-        </div>       
+        </div>     
            <button type='submit' className='btn' disabled={loading}>Login!</button>  
-           </fieldset>  
+           </div>  
       </LoginForm>
       <p style={{marginTop: '1rem'}}>Need to create an account? <Link to='/signup' style={{textDecoration:'none', color: '#000'}}>Sign Up</Link></p>
     </section>

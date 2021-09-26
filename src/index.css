@@ -187,23 +187,12 @@ h2 {
   padding-top: 2rem;
 }
 
-.signup-section {
-  display: flex;
-  margin: 1rem;
-}
-
 label[for] {
   margin-bottom: 10px;
 }
 
 input:focus {
   outline: none;
-}
-
-fieldset {
-  border: none;
-  display: flex;
-  flex-direction: column;
 }
 
 /* Footer ---------------------------------------------------- */

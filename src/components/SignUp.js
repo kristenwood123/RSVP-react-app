@@ -18,7 +18,7 @@ async function handleSubmit(e) {
     setError('')
     setLoading(true)
     await signupUser(emailRef.current.value, passwordRef.current.value)
-    history.push('/list')
+    history.push('/')
   } catch {
     setError('Failed to create an account')
   } 
@@ -30,10 +30,10 @@ return (
     <section className='signUp'>  
        {error && <Alert variant='danger'>{error}</Alert>}
       <SignupForm onSubmit={handleSubmit}>
-        <fieldset>
-        <h1>Sign Up</h1> 
-           <div className='signup-section'>
-          <label htmlFor="email">Email: </label>
+        <div className='signup-wrapper'>
+        <h1 style={{marginBottom: '2rem'}}>Sign Up</h1> 
+        <div className='signup-section'>
+          <label htmlFor="email">Email </label>
           <input 
             type="email" 
             name='email'
@@ -42,7 +42,15 @@ return (
         </div> 
 
         <div className='signup-section'>
-          <label htmlFor="password">Password: </label>
+          <label htmlFor="password">Password </label>
+          <input 
+            type="password" 
+            name='password'
+            ref={passwordRef}
+            required />
+        </div>
+         <div className='signup-section'>
+          <label htmlFor="password">Password Confirmation </label>
           <input 
             type="password" 
             name='password'
@@ -50,7 +58,7 @@ return (
             required />
         </div>       
            <button type='submit' className='btn' disabled={loading}>Sign Up!</button>  
-           </fieldset>  
+           </div>  
       </SignupForm>
       <p style={{marginTop: '1rem'}}>Already have an account? <Link to='/login' style={{textDecoration:'none', color: '#000'}}>Log in</Link></p>
     </section>

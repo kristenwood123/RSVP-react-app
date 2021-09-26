@@ -7,4 +7,17 @@ export const SignupForm = styled.form`
   margin-top: 1rem;
   padding-bottom: 2rem;
   max-width: 500px;
+  align-items: center;
+
+  .signup-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input[type='email'],
+  input[type='password'] {
+    margin-bottom: 20px;
+    width: 200px;
+  }
 `

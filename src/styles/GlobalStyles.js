@@ -26,14 +26,10 @@ header {
 
 label[for='email'],
 label[for='password'] {
-  width: 120px;
+  width: 200px;
   display: inline-block;
 }
 
-input[type='email'],
-input[type='password'] {
-  width: 80%;
-}
 
 input[type="text"] {
   width: 100%;
