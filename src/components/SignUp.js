@@ -52,7 +52,7 @@ return (
            <button type='submit' className='btn' disabled={loading}>Sign Up!</button>  
            </fieldset>  
       </SignupForm>
-      <p>Already have an account? <Link to='/login'>Log in</Link></p>
+      <p style={{marginTop: '1rem'}}>Already have an account? <Link to='/login' style={{textDecoration:'none', color: '#000'}}>Log in</Link></p>
     </section>
   </>
   )

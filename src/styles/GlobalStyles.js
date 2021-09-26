@@ -24,9 +24,9 @@ header {
   position: relative;
 }
 
-label[htmlFor='email'],
-label[htmlFor='password'] {
-  width: 150px;
+label[for='email'],
+label[for='password'] {
+  width: 120px;
   display: inline-block;
 }
 
@@ -41,6 +41,24 @@ input[type="text"] {
   padding-left: 5px;
   border-radius: 6px;
   border: 1px solid rgb(236, 234, 234);
+}
+
+.btn {
+  margin: 0 auto;
+  background-color: var(--color-teal);
+  color: white;
+  width: 50%;
+  border: none;
+  border-radius: 8px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  font-weight: 500;
 }
 `
 
