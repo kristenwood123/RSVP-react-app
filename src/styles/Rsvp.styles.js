@@ -16,6 +16,28 @@ export const RsvpSection = styled.section`
   text-align: center;
   align-items: center;
 }
+
+label[for='name'] {
+  width: 150px;
+}
+
+.btn {
+  margin: 0 auto;
+  background-color: var(--color-teal);
+  color: white;
+  width: 50%;
+  border: none;
+  border-radius: 8px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+}
 `
 export const AttendingTitle = styled.h2`
   text-align: center;

@@ -1,7 +1,7 @@
 import React from 'react'
 import { RsvpSection, AttendingTitle, Label } from '../styles/Rsvp.styles'
 
-const Rsvp1 = () => {
+const Rsvp = () => {
 
   return (
     <RsvpSection>
@@ -26,23 +26,25 @@ const Rsvp1 = () => {
             <AttendingTitle>Can you attend?</AttendingTitle>
             <div className='rsvp'>
             {/* put in astericks */}
-            <Label htmlFor="attending" class='checkbox'>
+            <Label htmlFor="attending" className='checkbox'>
               <input type="checkbox" className='attending'/>
-              <div class='checkbox__box'>Yes, I'll be attending</div>
+              <div className='checkbox__box'>Yes, I'll be attending</div>
             </Label>
-            <Label htmlFor="not__attending" class='checkbox'>
+            <Label htmlFor="not__attending" className='checkbox'>
               <input type="checkbox" className='attending'/>
-              <div class='checkbox__box'>No, I can't make it</div>
+              <div className='checkbox__box'>No, I can't make it</div>
             </Label>
               </div>
-            <button type='submit' className='btn'>Submit</button>
+              <div className='btn-container'>
+              <button type='submit' className='btn'>Submit</button>
+              </div>
           </form>
         </article>
     </RsvpSection>
   )
 }
 
-export default Rsvp1
+export default Rsvp
 
 
 

@@ -24,14 +24,23 @@ header {
   position: relative;
 }
 
-// label {
-//   width: 150px;
-//   display: inline-block;
-// }
+label[htmlFor='email'],
+label[htmlFor='password'] {
+  width: 150px;
+  display: inline-block;
+}
 
 input[type='email'],
 input[type='password'] {
   width: 80%;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  border-radius: 6px;
+  border: 1px solid rgb(236, 234, 234);
 }
 `
 

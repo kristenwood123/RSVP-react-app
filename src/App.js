@@ -9,7 +9,7 @@ import { AuthProvider } from './contexts/AuthContext'
 import GlobalStyles from './styles/GlobalStyles'
 
 //Components
-import Rsvp1 from './components/Rsvp1'
+import Rsvp from './components/Rsvp'
 import Main from './components/Main'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
@@ -27,7 +27,7 @@ const App = () => {
           <Route exact path='/' component={Main}/>
           <Route path='/signup' component={SignUp}/>
           <Route path='/login' component={Login}/>
-          <Route path='/rsvp' component={Rsvp1}/>
+          <Route path='/rsvp' component={Rsvp}/>
        </Switch>
     </AuthProvider>
     </div>
