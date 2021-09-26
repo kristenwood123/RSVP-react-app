@@ -36,7 +36,7 @@ const Main = () => {
            <article className='details-card stats'>
             <ul id='list-stats'>
               <div>
-                <li className='details-nums'>{count}</li>
+                <li className='details-nums'>8</li>
                 <li className='details-text'>total attending</li>
               </div>
                 <hr className='details-hr'/>
@@ -48,7 +48,7 @@ const Main = () => {
                 <hr className='details-hr'/>  
                 <div className="vl"></div>
               <div>
-                <li className='details-nums'>{unsure}</li>
+                <li className='details-nums'>1</li>
                 <li className='details-text'>unsure</li>
               </div>
                 <hr className='details-hr'/>  
