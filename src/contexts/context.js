@@ -1,4 +1,4 @@
-import React, { useState, useContext, useReducer } from 'react'
+import React, { useContext, useReducer } from 'react'
 const AppContext = React.createContext()
 
 // Reducer, where we deal with state of modal
@@ -24,9 +24,9 @@ const defaultModalState = {
 
 const AppProvider = ({ children }) => {
 // State -------------------------------------------->
-  const [showModal, setShowModal] = useState(false)
-  const [count, setCount] = useState(8)
-  const [unsure, setUnsure] = useState(2)
+  // const [showModal, setShowModal] = useState(false)
+  // const [count, setCount] = useState(8)
+  // const [unsure, setUnsure] = useState(2)
   const [state, dispatch] = useReducer(reducer, defaultModalState)
 
 
@@ -38,10 +38,7 @@ const closeModal = () => {
 }
 
   return <AppContext.Provider value={{ 
-   state,
-   showModal, 
-   count,
-   unsure,
+    state,
     closeModal
    }}>
     {children}

@@ -20,6 +20,16 @@ export const RsvpSection = styled.section`
 label[for='name'] {
   width: 150px;
 }
+
+input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+hr {
+  width: 120px;
+  margin-bottom: 2rem;
+}
 `
 export const AttendingTitle = styled.h2`
   text-align: center;
@@ -34,6 +44,7 @@ export const Label = styled.label`
 
   .checkbox__box {
     width: 200px;
+    margin-top: 8px;
   }
 
   .checkbox {

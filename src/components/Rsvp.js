@@ -5,7 +5,8 @@ const Rsvp = () => {
 
   return (
     <RsvpSection>
-      <h1 className='list__header'>RSVP</h1>
+      <h1 style={{marginBottom: '1rem'}}>RSVP</h1>
+        <hr className='hr'></hr>
         <article className='attending'>
           <form>
             <div className='signup-section'>
