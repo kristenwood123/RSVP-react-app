@@ -242,27 +242,6 @@ fieldset {
   font-weight: 500;
 }
 
-/* List/Who's Going ---------------------------------------------------- */
-.list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding-top: 6rem;
-  width: 90%;
-  margin: 0 auto;
-  padding-bottom: 100px;
-}
-
-.attending {
-  margin-top: 1rem;
-  width: 100%;
-}
-
-.attending form {
-  width: 100%;
-  margin: 0 auto;
-}
-
 /* Footer ---------------------------------------------------- */
 .footer {
   bottom: 0;

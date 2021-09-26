@@ -24,17 +24,15 @@ header {
   position: relative;
 }
 
-label {
-  width: 100px;
-  display: inline-block;
-}
+// label {
+//   width: 150px;
+//   display: inline-block;
+// }
 
 input[type='email'],
 input[type='password'] {
   width: 80%;
 }
-
-
 `
 
 export default GlobalStyles
