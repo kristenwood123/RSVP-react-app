@@ -7,5 +7,4 @@ export const SignupForm = styled.form`
   margin-top: 1rem;
   padding-bottom: 2rem;
   max-width: 500px;
-  background-color: pink;
 `

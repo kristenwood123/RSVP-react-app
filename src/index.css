@@ -7,20 +7,6 @@
   --color-teal: #4eb6ab;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family-montserrat);
-}
-
-header {
-  height: 10rem;
-  margin: 0 auto;
-  background-size: 400px;
-  position: relative;
-}
-
 .header__heading {
   color: black;
   font-size: 30px;

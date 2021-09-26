@@ -6,6 +6,7 @@ import {
   Route,
 } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
+import GlobalStyles from './styles/GlobalStyles'
 
 //Components
 import List from './components/List'
@@ -18,6 +19,7 @@ import Login from './components/Login'
 const App = () => {
   return (
     <BrowserRouter>
+    <GlobalStyles/>
     <div className="container">
        <Navbar/>       
       <AuthProvider>
