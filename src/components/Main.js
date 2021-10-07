@@ -1,12 +1,12 @@
 import React from 'react'
-import { useGlobalContext } from '../contexts/context'
+// import { useGlobalContext } from '../contexts/context'
 import { GiBeerStein } from 'react-icons/gi'
 import Progressbar from './Progress_Bar'
 import { useHistory } from 'react-router-dom'
 
 
 const Main = () => {
-   const { count, unsure } = useGlobalContext()
+  //  const { count, unsure } = useGlobalContext()
    const history = useHistory()
   return (
     <section className='details'>
