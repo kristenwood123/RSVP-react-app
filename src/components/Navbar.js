@@ -14,6 +14,7 @@ const Navbar = () => {
       return '/List'
     }
   }
+  
   return (
     <>
     <header>
@@ -26,7 +27,7 @@ const Navbar = () => {
           backgroundPosition: 'center', 
           backgroundSize: 'cover'}}>
         <li><NavLink exact to='/'>Details</NavLink></li>
-        <li><NavLink to={redirect}>Rsvp</NavLink></li>
+        <li><NavLink to='rsvp'>Rsvp</NavLink></li>
         <li><NavLink to='/List'>Who's Going</NavLink></li> 
       </div>
     </header>

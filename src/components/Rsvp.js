@@ -1,26 +1,53 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { RsvpSection, AttendingTitle, Label } from '../styles/Rsvp.styles'
 
+
 const Rsvp = () => {
+  const [inputFields, setInputFields] = useState({
+    firstName: '',
+    lastName: '', 
+    checkboxYes: false, 
+    checkboxNo: false
+  })
+
+  const handleChange = e => {
+    const value = e.target.type === "text" ? e.target.value : e.target.checked;
+    const name = e.target.name;
+
+    setInputFields({
+      [name]: value
+    })
+
+     console.log(inputFields.firstName);
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    console.log(inputFields.firstName);
+  }
 
   return (
     <RsvpSection>
       <h1 style={{marginBottom: '1rem'}}>RSVP</h1>
         <hr className='hr'></hr>
         <article className='attending'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='signup-section'>
-            <label htmlFor="name">First Name</label>
+            <label htmlFor="firstName">First Name</label>
             <input 
               type="text" 
-              name='name'
+              name='firstName'
+              value={inputFields.firstName}
+              onChange={handleChange}
               required />
           </div>  
             <div className='signup-section'>
-            <label htmlFor="name">Last Name</label>
+            <label htmlFor="lastName">Last Name</label>
             <input 
               type="text" 
-              name='name'
+              name='lastName'
+              value={inputFields.lastName}
+              onChange={handleChange}
               required />
           </div>    
 
@@ -28,11 +55,23 @@ const Rsvp = () => {
             <div className='rsvp'>
             {/* put in astericks */}
             <Label htmlFor="attending" className='checkbox'>
-              <input type="checkbox" className='attending'/>
+              <input 
+                type="checkbox" 
+                className='attending'
+                name='checkboxYes'
+                value={inputFields.checkboxYes}
+                onChange={handleChange}
+                />
               <div className='checkbox__box'>Yes, I'll be attending</div>
             </Label>
             <Label htmlFor="not__attending" className='checkbox'>
-              <input type="checkbox" className='attending'/>
+              <input 
+                type="checkbox" 
+                className='attending'
+                name='checkboxNo'
+                value={inputFields.checkboxNo}
+                onChange={handleChange}
+                />
               <div className='checkbox__box'>No, I can't make it</div>
             </Label>
               </div>
