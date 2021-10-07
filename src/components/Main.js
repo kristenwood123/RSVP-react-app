@@ -1,13 +1,24 @@
 import React from 'react'
-// import { useGlobalContext } from '../contexts/context'
 import { GiBeerStein } from 'react-icons/gi'
 import Progressbar from './Progress_Bar'
 import { useHistory } from 'react-router-dom'
+import { useAuthGlobal } from '../contexts/AuthContext'
 
 
-const Main = () => {
+const Main = ({ redirect }) => {
   //  const { count, unsure } = useGlobalContext()
-   const history = useHistory()
+  const { currentUser } = useAuthGlobal()
+  const history = useHistory()
+  
+  const handleRedirect = () => {
+
+    if(!currentUser) {
+      return history.push('/signup')
+    } else {
+      return history.push('/List')
+    }
+  }
+
   return (
     <section className='details'>
       <div className="text-container">
@@ -19,10 +30,10 @@ const Main = () => {
               <div className="btn-container">
                 <button 
                   className='list-btn btn1'
-                  onClick={() => history.push('/signup')}>See whose going</button>
+                  onClick={() => history.push('/List')}>See whose going</button>
                 <button 
                   className='rsvp-btn btn1'
-                  onClick={() => history.push('/signup')}>RSVP</button>
+                  onClick={handleRedirect}>RSVP</button>
               </div>
         </article>
         <article className='details-card'>

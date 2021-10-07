@@ -19,7 +19,7 @@ async function handleSubmit(e) {
     setError('')
     setLoading(true)
     await login(emailRef.current.value, passwordRef.current.value)
-    history.push('/rsvp')
+    history.push('/List')
   } catch {
     setError('Failed to sign in')
   } 

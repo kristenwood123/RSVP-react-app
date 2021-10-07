@@ -24,7 +24,6 @@ const defaultModalState = {
 
 const AppProvider = ({ children }) => {
 // State -------------------------------------------->
-  // const [showModal, setShowModal] = useState(false)
   // const [count, setCount] = useState(8)
   // const [unsure, setUnsure] = useState(2)
   const [state, dispatch] = useReducer(reducer, defaultModalState)

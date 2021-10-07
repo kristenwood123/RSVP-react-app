@@ -15,6 +15,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
+import List from './components/List'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path='/signup' component={SignUp}/>
           <Route path='/login' component={Login}/>
           <Route path='/rsvp' component={Rsvp}/>
+          <Route path='/List' component={List}/>
        </Switch>
     </AuthProvider>
     </div>

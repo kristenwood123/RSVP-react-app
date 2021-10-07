@@ -1,7 +1,19 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
+import { useAuthGlobal } from '../contexts/AuthContext'
 
 const Navbar = () => {
+  const history = useHistory()
+  const { currentUser } = useAuthGlobal()
+
+  const redirect = () => {
+    console.log(currentUser);
+    if(!currentUser) {
+      return '/signup'
+    } else {
+      return '/List'
+    }
+  }
   return (
     <>
     <header>
@@ -14,7 +26,7 @@ const Navbar = () => {
           backgroundPosition: 'center', 
           backgroundSize: 'cover'}}>
         <li><NavLink exact to='/'>Details</NavLink></li>
-        <li><NavLink to='/signup'>Rsvp</NavLink></li>
+        <li><NavLink to={redirect}>Rsvp</NavLink></li>
         <li><NavLink to='/List'>Who's Going</NavLink></li> 
       </div>
     </header>
