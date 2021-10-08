@@ -1,30 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { RsvpSection, AttendingTitle, Label } from '../styles/Rsvp.styles'
-
+import { useGlobalContext } from '../contexts/context'
 
 const Rsvp = () => {
-  const [inputFields, setInputFields] = useState({
-    firstName: '',
-    lastName: '', 
-    checkboxYes: false, 
-    checkboxNo: false
-  })
+  
+  const { inputFields, handleChange, handleSubmit } = useGlobalContext()
 
-  const handleChange = e => {
-    const value = e.target.type === "text" ? e.target.value : e.target.checked;
-    const name = e.target.name;
-
-    setInputFields({
-      [name]: value
-    })
-
-     console.log(inputFields.firstName);
-  }
-
-  const handleSubmit = e => {
-    e.preventDefault()
-    console.log(inputFields.firstName);
-  }
 
   return (
     <RsvpSection>
@@ -86,13 +67,8 @@ const Rsvp = () => {
 
 export default Rsvp
 
-
-
-// import React from 'react'
-// import Modal from './Modal'
 // import { useGlobalContext } from '../contexts/context'
-// import { collection } from 'firebase/firestore'
-// import { RsvpForm } from '../styles/'
+
 
 // const Rsvp = () => {
 // const { inputValues, handleOnChange, handleSubmit, state} = useGlobalContext()
@@ -114,42 +90,7 @@ export default Rsvp
 //             onChange={handleOnChange}
 //             required />
 //         </div>
-
-//         <div className='rsvp-section'>
-//           <label htmlFor="lastName">Last Name: </label>
-//           <input 
-//             type="text"
-//             placeholder='Required' 
-//             id='lastName'
-//             name='lastName' 
-//             value={inputValues.lastName}  
-//             onChange={handleOnChange}
-//             required />
-//         </div>
-
-//            <div className='rsvp-section'>
-//           <label htmlFor="number">Email: </label>
-//           <input 
-//             type="email" 
-//             id='email' 
-//             name='email'
-//             placeholder='Required' 
-//             value={inputValues.email}
-//             onChange={handleOnChange}
-//             required />
-//         </div> 
-
-//         <div className='rsvp-section'>
-//           <label htmlFor="number">Phone Number: </label>
-//           <input 
-//             type="tel" 
-//             id='number' 
-//             name='number'
-//             placeholder='123-456-7890' 
-//             value={inputValues.number}
-//             onChange={handleOnChange}
-//             required />
-//         </div>       
+    
 //            <button type='submit' className='btn'>Let's Party!</button>    
 //         </fieldset>
 //       </form>
