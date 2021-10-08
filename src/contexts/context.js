@@ -1,11 +1,21 @@
 import React, { useContext, useState } from 'react'
+
 const AppContext = React.createContext()
 
 
 const AppProvider = ({ children }) => {
 // State -------------------------------------------->
-  const [attending, setAttending] = useState('')
+  const attendees = [
+    {
+      firstName: 'Kristen',
+      lastName: 'Morley',
+      checkboxYes: false,
+      checkboxNo: true,
+      id: 0
+    }
+  ]
 
+  const [attending, setAttending] = useState(attendees)
   const [inputFields, setInputFields] = useState({
     firstName: '',
     lastName: '', 
@@ -26,12 +36,13 @@ const AppProvider = ({ children }) => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    
+   
   }
 
 
   return <AppContext.Provider value={{ 
-    inputFields, 
+    inputFields,
+    attending,
     handleChange, 
     handleSubmit
    }}>
